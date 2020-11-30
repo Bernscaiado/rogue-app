@@ -1,0 +1,5 @@
+<%= form_tag photos_update_path do %>
+  <% @photos.each do |photo| %>
+    <%= fields_for "photos[]", photo do |pf| %>
+      <%= pf.text_field :caption %>
+      ... other photo fields

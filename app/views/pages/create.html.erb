@@ -1,0 +1,8 @@
+<%= form_tag create_path do %>
+  <% @ratings.each do |photo| %>
+    <%= fields_for "photos[#{photo.id}]", photo do |pf| %>
+      <%= pf.text_field :caption %>
+        ... [other fields]
+    <% end %>
+  <% end %>
+<% end %>
